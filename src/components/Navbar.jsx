@@ -12,7 +12,7 @@ export default function Navbar() {
         {/* Left Side */}
         <div className="flex items-center gap-4">
           <img
-            src="public\profile.jpeg"
+            src="/profile.jpeg"
             alt="profile"
             className="w-14 h-14 rounded-full object-cover"
           />

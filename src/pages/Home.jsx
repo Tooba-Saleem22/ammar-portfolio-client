@@ -144,7 +144,7 @@ const Home = () => {
           <a href="/project1" target="_blank" className="group">
             <div className="overflow-hidden  cursor-pointer">
               <img
-                src="public\img1.png"
+                src="/img1.png"
                 alt="Project 1"
                 className="w-full h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-300"
               />
@@ -158,7 +158,7 @@ const Home = () => {
           <a href="/project2" target="_blank" className="group">
             <div className="overflow-hidden cursor-pointer">
               <img
-                src="public\img2.png"
+                src="/img2.png"
                 alt="Project 2"
                 className="w-full h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-300"
               />
@@ -172,7 +172,7 @@ const Home = () => {
           <a href="/project3" target="_blank" className="group">
             <div className="overflow-hidden  cursor-pointer">
               <img
-                src="public\img3.png"
+                src="/img3.png"
                 alt="Project 3"
                 className="w-full h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-300"
               />
@@ -186,7 +186,7 @@ const Home = () => {
           <a href="/project4" target="_blank" className="group">
             <div className="overflow-hidden  cursor-pointer">
               <img
-                src="public\img4.png"
+                src="/img4.png"
                 alt="Project 4"
                 className="w-auto h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-300"
               />
