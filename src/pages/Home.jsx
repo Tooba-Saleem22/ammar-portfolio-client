@@ -339,7 +339,7 @@ const Home = () => {
         <div className="text-center">
           <a
             href="/contact"
-            className="inline-flex items-center gap-3 bg-[#ceba9e] text-black px-4 py-2  font-light hover:bg-[#bfa77c] transition"
+            className="inline-flex items-center gap-3 bg-[#ceba9e]  text-black px-4 py-2  font-light hover:bg-[#bfa77c] transition"
           >
             Get in Touch
             <span className="transform hue-rotate-30 inline-block">➔</span>
