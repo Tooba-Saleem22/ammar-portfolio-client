@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
+import CTA from "../components/CTA";
 import { FaLaptop, FaWordpress, FaBullhorn } from "react-icons/fa";
 import { SiCanva, SiAppstore } from "react-icons/si";
 import { motion } from "framer-motion";
@@ -28,7 +29,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.6 }}
-          transition={{ duration: 1.8, ease }}
+          transition={{ duration: 1.6, ease }}
         >
           <motion.div
             className="flex space-x-12 whitespace-nowrap"
@@ -79,8 +80,8 @@ const Home = () => {
         ].map((item, idx) => (
           <motion.div
             key={item.id}
-            initial={{ opacity: 0, y: 50, scale: 0.95, filter: "blur(4px)" }}
-            whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 1.5, delay: idx * 0.2, ease }}
             className="bg-[#ceba9e]/10 p-6 max-w-xs h-60 flex flex-col justify-start hover:scale-105 transition-transform duration-300"
@@ -105,7 +106,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.6 }}
-            transition={{ duration: 1.8, ease }}
+            transition={{ duration: 1.5, ease }}
             className="text-7xl font-light mb-2 text-[#ceba9e]"
           >
             Our Projects
@@ -128,8 +129,8 @@ const Home = () => {
               href={`/project${idx + 1}`}
               target="_blank"
               rel="noreferrer"
-              initial={{ opacity: 0, y: 50, scale: 0.95, filter: "blur(4px)" }}
-              whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: false, amount: 0.5 }}
               transition={{ duration: 1.5, delay: idx * 0.2, ease }}
               className="group"
@@ -154,13 +155,11 @@ const Home = () => {
         <h2 className="text-[#ceba9e] text-6xl md:text-7xl font-light mb-4 text-center">
           The Process
         </h2>
-
         <p className="text-[#ceba9e] text-base text-center md:text-lg max-w-2xl mx-auto mb-16 font-light">
           A structured approach focused on delivering impactful results through
           design, strategy, and execution tailored to your business goals.
         </p>
 
-        {/* Timeline line */}
         <div className="absolute md:left-1/2 left-6 transform -translate-x-1/2 md:h-[95%] h-[calc(100%-2rem)] border-l border-[#ceba9e]/40"></div>
 
         <div className="relative space-y-10">
@@ -198,28 +197,17 @@ const Home = () => {
           ].map((item, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 50, scale: 0.95, filter: "blur(4px)" }}
-              whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: false, amount: 0.5 }}
               transition={{ duration: 1.5, delay: idx * 0.2, ease }}
-              className={`flex flex-col md:flex-row relative ${
-                item.side === "right" ? "md:justify-end" : "md:justify-start"
-              }`}
+              className={`flex flex-col md:flex-row relative ${item.side === "right" ? "md:justify-end" : "md:justify-start"}`}
             >
-              {/* Number Circle */}
               <span className="absolute md:left-1/2 left-6 transform -translate-x-1/2 bg-black text-[#ceba9e] font-light w-9 h-9 flex items-center justify-center border border-[#ceba9e] z-10 top-[5%]">
                 {item.num}
               </span>
-
-              {/* Content Box */}
               <div
-                className={`bg-[#ceba9e]/10 p-5 md:mt-5 mt-7 md:p-10 w-[80%] md:w-auto md:max-w-lg hover:scale-105 transition rounded-none ${
-                  item.side === "right"
-                    ? "md:ml-10 ml-[14%]"
-                    : item.num === "02" || item.num === "04"
-                      ? "md:mr-16  md:ml-[0%] ml-[13%]"
-                      : "md:mr-10 ml-[14%]"
-                }`}
+                className={`bg-[#ceba9e]/10 p-5 md:mt-5 mt-7 md:p-10 w-[80%] md:w-auto md:max-w-lg hover:scale-105 transition rounded-none ${item.side === "right" ? "md:ml-10 ml-[14%]" : item.num === "02" || item.num === "04" ? "md:mr-16 md:ml-[0%] ml-[13%]" : "md:mr-10 ml-[14%]"}`}
               >
                 <h3 className="text-[#ceba9e] text-2xl md:text-3xl font-light mb-3">
                   {item.title}
@@ -233,61 +221,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 60, scale: 0.95, filter: "blur(6px)" }}
-        whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
-        viewport={{ once: false, amount: 0.5 }}
-        transition={{ duration: 1.8, ease }}
-        className="w-full bg-black text-white py-2 relative overflow-hidden"
-      >
-        <div className="w-full overflow-hidden py-1 -mt-10 md:mt-0 mb-14 border-t border-b border-[#ceba9e]/40">
-          <motion.div
-            className="flex whitespace-nowrap"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
-          >
-            {Array(2)
-              .fill(0)
-              .map((_, dup) =>
-                Array(10)
-                  .fill(0)
-                  .map((_, index) => (
-                    <div
-                      key={`${dup}-${index}`}
-                      className="flex items-center space-x-1 text-[#ceba9e] text-sm px-2"
-                    >
-                      <span>Let's Talk</span>
-                      <span className="text-[#ceba9e] text-sm font-light">
-                        +++
-                      </span>
-                    </div>
-                  )),
-              )}
-          </motion.div>
-        </div>
-
-        <div className="text-center max-w-2xl mx-auto mb-8">
-          <p className="text-base text-[#ceba9e]/80 mb-2">Project in mind?</p>
-          <h2 className="text-5xl md:text-8xl font-light text-[#ceba9e] mb-4">
-            Let’s make your <br /> Website shine
-          </h2>
-          <p className="text-lg text-[#ceba9e]/80 mb-8">
-            Premium web design, development, and SEO <br /> services to help
-            your business stand out.
-          </p>
-        </div>
-
-        <div className="text-center">
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-3 bg-[#ceba9e] text-black px-4 py-2 font-light hover:bg-[#bfa77c] transition"
-          >
-            Get in Touch
-            <span className="transform hue-rotate-30 inline-block">➔</span>
-          </a>
-        </div>
-      </motion.div>
+      <CTA />
     </div>
   );
 };
