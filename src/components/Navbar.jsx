@@ -12,7 +12,7 @@ export default function Navbar() {
         {/* Left Side */}
         <div className="flex items-center gap-2 sm:gap-4">
           <img
-            src="/profile.jpeg"
+            src="fazool.jpeg"
             alt="profile"
             className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover"
           />
