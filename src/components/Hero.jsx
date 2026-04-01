@@ -6,14 +6,14 @@ export default function Hero() {
   const ease = [0.22, 1, 0.36, 1];
 
   return (
-    <section className="h-[45vh] md:h-screen flex flex-col justify-center md:mt-20 items-center text-center bg-black px-4 md:translate-y-0">
+    <section className="h-[45vh] md:h-screen flex flex-col justify-center md:mt-20 items-center text-center bg-white px-4 md:translate-y-0">
       {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: 70, scale: 0.9, filter: "blur(8px)" }}
         whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
         viewport={{ once: false, amount: 0.6 }}
         transition={{ duration: 1.8, ease }}
-        className="text-5xl md:text-9xl font-light mb-3 md:mb-6 text-[#ceba9e]"
+        className="text-5xl md:text-9xl font-light mb-3 md:mb-6 text-black"
       >
         Web Designer <span className="block">& Developer</span>
       </motion.h1>
@@ -24,7 +24,7 @@ export default function Hero() {
         whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
         viewport={{ once: false, amount: 0.6 }}
         transition={{ duration: 1.8, delay: 0.3, ease }}
-        className="text-lg md:text-xl font-light mb-4 md:mb-12 max-w-xl text-[#ceba9e]"
+        className="text-lg md:text-xl font-light mb-4 md:mb-12 max-w-xl text-black"
       >
         Premium Web Design, Development, and SEO services to help your business
         stand out.
@@ -38,11 +38,11 @@ export default function Hero() {
         transition={{ duration: 1.6, delay: 0.6, ease }}
         className="flex flex-col items-center gap-2"
       >
-        <div className="p-3 rounded-full border-2 border-[#ceba9e] bg-transparent">
-          <ArrowDown className="w-4 h-4 text-[#ceba9e]" />
+        <div className="p-3 rounded-full border-2 border-black bg-transparent">
+          <ArrowDown className="w-4 h-4 text-black" />
         </div>
 
-        <span className="uppercase tracking-wider font-semibold text-[#ceba9e]">
+        <span className="uppercase tracking-wider font-semibold text-black">
           Services
         </span>
       </motion.div>
