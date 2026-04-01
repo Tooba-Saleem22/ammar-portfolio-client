@@ -9,7 +9,7 @@ const Services = () => {
   const servicesData = [
     {
       title: "WordPress",
-      img: "/wordpress service.png",
+      img: "/img1.png",
       sections: [
         {
           heading: "Concept",
@@ -107,7 +107,7 @@ const Services = () => {
         className="w-auto flex justify-center h-[40vh] md:h-[70vh] mt-10 overflow-hidden"
       >
         <img
-          src="/services.avif"
+          src="/services.png"
           alt="Services"
           className="w-full h-full object-cover"
         />
