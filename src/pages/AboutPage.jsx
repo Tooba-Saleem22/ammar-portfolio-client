@@ -17,7 +17,7 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="bg-black text-white flex flex-col items-center">
+    <div className="bg-white text-black flex flex-col items-center">
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -25,10 +25,10 @@ const AboutPage = () => {
         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
         className="text-center px-4 mt-8 md:mt-16"
       >
-        <h1 className="text-5xl md:text-9xl font-light mb-3 md:mb-6 text-[#ceba9e]">
+        <h1 className="text-5xl md:text-9xl font-light mb-3 md:mb-6 text-black">
           About Me
         </h1>
-        <p className="text-base md:text-xl text-[#ceba9e]/80 mb-8 max-w-2xl mx-auto">
+        <p className="text-base md:text-xl text-black/80 mb-8 max-w-2xl mx-auto">
           I’m a passionate frontend developer focused on building modern,
           responsive and visually engaging digital experiences.
         </p>
@@ -42,16 +42,16 @@ const AboutPage = () => {
         transition={{ duration: 1.6, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="flex flex-col items-center gap-2"
       >
-        <div className="p-3 rounded-full border-2 border-[#ceba9e] bg-transparent">
-          <FaArrowDown className="w-4 h-4 text-[#ceba9e]" />
+        <div className="p-3 rounded-full border-2 border-black bg-transparent">
+          <FaArrowDown className="w-4 h-4 text-black" />
         </div>
-        <span className="uppercase tracking-wider mb-10 font-semibold text-[#ceba9e]">
+        <span className="uppercase tracking-wider mb-10 font-semibold text-black">
           About Me
         </span>
       </motion.div>
 
       {/* Continuous Marquee */}
-      <div className="w-full overflow-hidden border-t border-b border-[#ceba9e]/40 py-1 relative bg-black">
+      <div className="w-full overflow-hidden border-t border-b border-black/40 py-1 relative bg-white">
         <motion.div
           className="flex whitespace-nowrap"
           animate={{ x: ["0%", "-50%"] }}
@@ -60,10 +60,10 @@ const AboutPage = () => {
           {[...skills, ...skills, ...skills].map((skill, idx) => (
             <div
               key={idx}
-              className="flex items-center space-x-2 text-[#ceba9e] text-sm px-4"
+              className="flex items-center space-x-2 text-black text-sm px-4"
             >
               <span>{skill}</span>
-              <span className="text-[#ceba9e] font-light">•</span>
+              <span className="text-black font-light">•</span>
             </div>
           ))}
         </motion.div>
@@ -76,25 +76,25 @@ const AboutPage = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-[#181716] border border-[#ceba9e] p-6 md:p-10 rounded-md shadow-lg"
+          className="bg-white border border-black p-6 md:p-10 rounded-md shadow-lg"
         >
-          <h2 className="text-xl md:text-1xl text-[#ceba9e] mb-4 font-light text-left">
+          <h2 className="text-xl md:text-1xl text-black mb-4 font-light text-left">
             Ammar Awan
           </h2>
 
-          {/* Image like service cards */}
+          {/* Image */}
           <div className="overflow-hidden rounded-md mb-6">
             <img
-              src="img1.png" // replace with your image path
-              alt="Ammmar Awan"
-              className="w-full h-[280px]  md:h-[480px] object-cover"
+              src="img1.png"
+              alt="Ammar Awan"
+              className="w-full h-[280px] md:h-[480px] object-cover"
             />
           </div>
 
-          <h3 className="text-xl md:text-2xl text-[#ceba9e]/80 mb-4 font-light text-left">
+          <h3 className="text-xl md:text-2xl text-black/80 mb-4 font-light text-left">
             Your Partner in Bringing Your Web Design Vision to Life
           </h3>
-          <p className="text-[#ceba9e]/90 text-sm md:text-base mb-2">
+          <p className="text-black/90 text-sm md:text-base mb-2">
             As a freelance web designer and developer, I combine creativity and
             technical expertise to deliver user-friendly web experiences. My
             approach emphasizes collaboration and clear communication, making

@@ -11,10 +11,10 @@ const CTA = () => {
       whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
       viewport={{ once: false, amount: 0.5 }}
       transition={{ duration: 1.8, ease }}
-      className="w-full bg-black text-white py-2 relative overflow-hidden"
+      className="w-full bg-white text-black py-2 relative overflow-hidden"
     >
       {/* Marquee / Scrolling text */}
-      <div className="w-full overflow-hidden py-1 -mt-10 md:mt-0 mb-14 border-t border-b border-[#ceba9e]/40">
+      <div className="w-full overflow-hidden py-1 -mt-10 md:mt-0 mb-14 border-t border-b border-black/40">
         <motion.div
           className="flex whitespace-nowrap"
           animate={{ x: ["0%", "-50%"] }}
@@ -28,12 +28,10 @@ const CTA = () => {
                 .map((_, index) => (
                   <div
                     key={`${dup}-${index}`}
-                    className="flex items-center space-x-1 text-[#ceba9e] text-sm px-2"
+                    className="flex items-center space-x-1 text-black text-sm px-2"
                   >
                     <span>Let's Talk</span>
-                    <span className="text-[#ceba9e] text-sm font-light">
-                      +++
-                    </span>
+                    <span className="text-black text-sm font-light">+++</span>
                   </div>
                 )),
             )}
@@ -42,11 +40,11 @@ const CTA = () => {
 
       {/* Text Content */}
       <div className="text-center max-w-2xl mx-auto mb-8">
-        <p className="text-base text-[#ceba9e]/80 mb-2">Project in mind?</p>
-        <h2 className="text-5xl md:text-8xl font-light text-[#ceba9e] mb-4">
+        <p className="text-base text-black/80 mb-2">Project in mind?</p>
+        <h2 className="text-5xl md:text-8xl font-light text-black mb-4">
           Let’s make your <br /> Website shine
         </h2>
-        <p className="text-lg text-[#ceba9e]/80 mb-8">
+        <p className="text-lg text-black/80 mb-8">
           Premium web design, development, and SEO <br /> services to help your
           business stand out.
         </p>
@@ -56,10 +54,10 @@ const CTA = () => {
       <div className="text-center">
         <a
           href="/contact"
-          className="inline-flex items-center gap-3 bg-[#ceba9e] text-black px-4 py-2 font-light hover:bg-[#bfa77c] transition"
+          className="inline-flex items-center gap-3 mb-4 bg-white text-black border border-black px-5 py-2 font-light hover:bg-black hover:text-white transition"
         >
           Get in Touch
-          <span className="transform hue-rotate-30 inline-block">➔</span>
+          <span className="inline-block">➔</span>
         </a>
       </div>
     </motion.div>
